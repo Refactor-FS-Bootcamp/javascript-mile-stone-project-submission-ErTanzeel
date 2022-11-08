@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> reservation page</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/menu.css">
+</head>
+
+<body>
+
+    <div id="sh" class="show py-3" style="background-color: black; font-weight: bolder;
+    font-size: larger;">
+        <h3 class="kuchbhi py-3"> order list</h3>
+        <table class="table-striped table table-bordered py-3 px-3" style="background-color: black;">
+            <thead>
+                <tr class="theader" style="color: rgb(64, 195, 4);">
+                    <th scope="col"> Name</th>
+                    <th scope="col">Order</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Time</th>
+                </tr>
+            </thead>
+
+            <tbody id="card2" style="color: white;">
+                <tr>
+
+                </tr>
+            </tbody>
+        </table>
+        <a href="/index.html">
+            <button type="button" class="btn btn-primary">Back</button>
+
+        </a>
+
+
+        <script src="/js/book.js"></script>
+        <script>
+
+
+            function show(storeobj) {
+                let obj2 = storeobj.collection;
+                const card1 = document.getElementById('card2');
+                if (obj2.length) {
+                    card1.innerText = ''
+
+                    obj2.forEach((elem,) => {
+                        card1.innerHTML += ` <tr>
+                <td>${elem.name}</td>
+                <td> ${elem.select}</td>
+                <td> ${elem.date}</td>
+                <td> ${elem.time}</td>
+            </tr>`
+                    });
+                }
+                else {
+                    card1.innerHTML = "<h3 class ='py-3' style =' text-align:center; width:191%;' >Nothing in list</h3>"
+                }
+            }
+
+            let storeobj = new Store('order')
+            show(storeobj)
+
+
+        </script>
+</body>
+
+</html>
