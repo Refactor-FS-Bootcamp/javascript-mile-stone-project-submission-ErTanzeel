@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.food {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    border: 2px solid red;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin: 25px 0px;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+
+}
+
+.bookfood {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.form_container {
+    height: 70vh;
+    width: 55vw;
+    position: relative;
+    top: 40px;
+    padding: 44px;
+}
+
+
+.footer {
+    display: flex;
+    width: 100vw;
+    height: 220px;
+    background-color: black;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    column-gap: 20px;
+
+
+}
+
+.social {
+    margin-top: 37px;
+}
+
+.copy {
+    font-weight: bold;
+    font-family: cursive;
+    color: white;
+}
